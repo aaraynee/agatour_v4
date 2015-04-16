@@ -1,0 +1,411 @@
+2015-04-15 22:00:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tournament could not be found.
+Exception Attributes: array (
+  'class' => 'Tournament',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2015-04-15 22:02:17 Error: [Cake\Controller\Exception\MissingActionException] Action TournamentController::get_tournaments() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TournamentController',
+  'action' => 'get_tournaments',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#2 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2015-04-15 22:02:24 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tournament/home.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tournament/home.ctp',
+)
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName('home')
+#1 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(576): Cake\View\View->render('home', NULL)
+#2 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(50): Cake\Controller\Controller->render('home')
+#3 [internal function]: App\Controller\TournamentController->get_tournaments('home')
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#7 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2015-04-15 22:03:21 Error: [Cake\View\Exception\MissingTemplateException] Template file "Tournament/get_tournaments.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tournament/get_tournaments.ctp',
+)
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/View/View.php(460): Cake\View\View->_getViewFileName(NULL)
+#1 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(576): Cake\View\View->render(NULL, NULL)
+#2 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#4 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2015-04-15 22:07:27 Error: Fatal Error (1): Call to a member function get_tournaments() on null in [/Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php, line 26]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-15 22:07:27 Error: [Cake\Error\FatalErrorException] Call to a member function get_tournaments() on null
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/Users/ahmed/Gi...', 26)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-15 22:08:57 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-15 22:09:33 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-15 22:09:34 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-15 22:09:36 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-15 22:09:37 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-15 22:09:38 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-15 22:10:14 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-15 22:10:15 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-15 22:10:16 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-16 03:06:02 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-16 03:06:35 Warning: Warning (2): Missing argument 1 for Cake\ORM\Table::get(), called in /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php on line 32 and defined in [/Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php, line 1069]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\ORM\Table::get() - CORE/src/ORM/Table.php, line 1069
+App\Controller\TournamentController::schedule() - APP/Controller/TournamentController.php, line 32
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 405
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2015-04-16 03:06:36 Error: [PDOException] SQLSTATE[HY000] [1130] Host 'pool-71-246-124-78.nycmny.east.verizon.net' is not allowed to connect to this MySQL server
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=106....', 'aga_admin', '788088pC', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(86): Cake\Database\Driver\Mysql->_connect('mysql:host=106....', Array)
+#2 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(46): Cake\Database\Driver\Mysql->connect()
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(44): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(319): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(421): Cake\Database\Connection->schemaCollection()
+#8 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(498): Cake\ORM\Table->schema()
+#9 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(1071): Cake\ORM\Table->primaryKey()
+#10 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get()
+#11 [internal function]: App\Controller\TournamentController->schedule('home')
+#12 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#13 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#14 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#15 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#16 {main}
+
+
+2015-04-16 03:07:21 Error: [PDOException] SQLSTATE[HY000] [1130] Host 'pool-71-246-124-78.nycmny.east.verizon.net' is not allowed to connect to this MySQL server
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=106....', 'aga_admin', '788088pC', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(86): Cake\Database\Driver\Mysql->_connect('mysql:host=106....', Array)
+#2 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(46): Cake\Database\Driver\Mysql->connect()
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(44): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(319): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(421): Cake\Database\Connection->schemaCollection()
+#8 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(140): Cake\ORM\Table->schema()
+#9 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#10 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#11 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(880): Cake\ORM\Table->query()
+#12 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->find()
+#13 [internal function]: App\Controller\TournamentController->schedule('home')
+#14 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#15 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#16 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#17 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2015-04-16 03:08:27 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aga_wordpress.tournament' doesn't exist
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'tournament', Array, Object(Cake\Database\Schema\Table))
+#1 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(65): Cake\Database\Schema\Collection->describe('tournament', Array)
+#2 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Schema\CachedCollection->describe('tournament')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(140): Cake\ORM\Table->schema()
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(880): Cake\ORM\Table->query()
+#7 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->find()
+#8 [internal function]: App\Controller\TournamentController->schedule('home')
+#9 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#10 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#12 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2015-04-16 03:10:26 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-16 03:10:27 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(32): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-16 03:11:03 Error: Fatal Error (1): Class 'App\Controller\TableRegistry' not found in [/Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php, line 32]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-16 03:11:04 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\TableRegistry' not found
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', '/Users/ahmed/Gi...', 32)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-16 03:11:06 Error: Fatal Error (1): Class 'App\Controller\TableRegistry' not found in [/Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php, line 32]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 191
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 90
+[main] - [internal], line ??
+
+
+
+2015-04-16 03:11:06 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\TableRegistry' not found
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(90): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', '/Users/ahmed/Gi...', 32)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2015-04-16 03:11:30 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(36): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(36): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-16 03:11:31 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(36): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(36): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-16 03:11:32 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(36): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(36): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-16 03:11:33 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(36): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(36): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Controller\TournamentController->schedule('home')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#6 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2015-04-16 03:11:58 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aga_wordpress.tournament' doesn't exist
+Request URL: /schedule
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'tournament', Array, Object(Cake\Database\Schema\Table))
+#1 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(65): Cake\Database\Schema\Collection->describe('tournament', Array)
+#2 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Schema\CachedCollection->describe('tournament')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(140): Cake\ORM\Table->schema()
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(880): Cake\ORM\Table->query()
+#7 /Users/ahmed/GitHub/agatour_v4/src/Controller/TournamentController.php(36): Cake\ORM\Table->find()
+#8 [internal function]: App\Controller\TournamentController->schedule('home')
+#9 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Controller/Controller.php(405): call_user_func_array(Array, Array)
+#10 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TournamentController))
+#12 /Users/ahmed/GitHub/agatour_v4/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+

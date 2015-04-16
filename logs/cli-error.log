@@ -1,0 +1,62 @@
+2015-04-03 21:16:59 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aga_wordpress.tournament' doesn't exist
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'tournament', Array, Object(Cake\Database\Schema\Table))
+#1 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(65): Cake\Database\Schema\Collection->describe('tournament', Array)
+#2 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Schema\CachedCollection->describe('tournament')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(140): Cake\ORM\Table->schema()
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 /Users/ahmed/GitHub/agatour_v4/src/Shell/TournamentUpdateShell.php(20): Cake\ORM\Table->query('\n        select...')
+#7 [internal function]: App\Shell\TournamentUpdateShell->main()
+#8 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(387): call_user_func_array(Array, Array)
+#9 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#10 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#11 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#12 /Users/ahmed/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#13 {main}
+
+
+2015-04-03 21:20:13 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aga_wordpress.tournament' doesn't exist
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'tournament', Array, Object(Cake\Database\Schema\Table))
+#1 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(65): Cake\Database\Schema\Collection->describe('tournament', Array)
+#2 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(422): Cake\Database\Schema\CachedCollection->describe('tournament')
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(140): Cake\ORM\Table->schema()
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(122): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(1145): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Table.php(880): Cake\ORM\Table->query()
+#7 /Users/ahmed/GitHub/agatour_v4/src/Shell/TournamentUpdateShell.php(18): Cake\ORM\Table->find()
+#8 [internal function]: App\Shell\TournamentUpdateShell->main()
+#9 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(387): call_user_func_array(Array, Array)
+#10 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#11 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#12 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#13 /Users/ahmed/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#14 {main}
+
+
+2015-04-03 21:22:56 Error: [BadMethodCallException] Unknown method "get_tournaments"
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/src/Shell/TournamentUpdateShell.php(18): Cake\ORM\Table->__call('get_tournaments', Array)
+#1 /Users/ahmed/GitHub/agatour_v4/src/Shell/TournamentUpdateShell.php(18): Cake\ORM\Table->get_tournaments()
+#2 [internal function]: App\Shell\TournamentUpdateShell->main()
+#3 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(387): call_user_func_array(Array, Array)
+#4 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#5 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#6 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#7 /Users/ahmed/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#8 {main}
+
+
+2015-04-16 03:18:28 Error: [Cake\Console\Exception\MissingShellException] Shell class for "Tournament" could not be found.
+Exception Attributes: array (
+  'class' => 'Tournament',
+)
+Stack Trace:
+#0 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(197): Cake\Console\ShellDispatcher->findShell('Tournament')
+#1 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#2 /Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#3 /Users/ahmed/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+

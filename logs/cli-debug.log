@@ -1,0 +1,25 @@
+2015-04-03 21:16:22 Notice: Notice (8): Undefined property: App\Shell\TournamentUpdateShell::$Tournament in [/Users/ahmed/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php, line 443]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+Cake\Console\Shell::__get() - CORE/src/Console/Shell.php, line 443
+App\Shell\TournamentUpdateShell::main() - APP/Shell/TournamentUpdateShell.php, line 11
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 387
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-04-03 21:22:03 Notice: Notice (8): Undefined variable: conn in [/Users/ahmed/GitHub/agatour_v4/src/Shell/TournamentUpdateShell.php, line 18]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Shell\TournamentUpdateShell::main() - APP/Shell/TournamentUpdateShell.php, line 18
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 387
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
