@@ -1,59 +1,53 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       http://www.opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = 'CakePHP: the rapid development php framework';
-?>
 <!DOCTYPE html>
 <html>
-<head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
-    </title>
+<head profile="http://www.w3.org/2005/10/profile">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <title><?= $this->fetch('title') ?></title>
+    <meta property="og:title" content="{% if(title is defined) %}{{ title }}{% else %}AGATOUR{% endif %}" />
+    <meta property="og:image" content="{% if(image is defined) %}{{ image }}{% endif %}" />
+    <meta property="og:description" content="{% if(description is defined) %}{{ description }}{% else %}Official Website of the AGA Tour.{% endif %}" />
+
+
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->css('uikit.almost-flat.css') ?>
+    <?= $this->Html->css('style.css') ?>
 
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+    <?= $this->Html->script('http://code.jquery.com/jquery-2.1.1.min.js') ?>
+    <?= $this->Html->script('uikit.min.js') ?>
+
+    {{ partial("analytics") }}
+    {{ partial("addthis") }}
 </head>
 <body>
-    <header>
-        <div class="header-title">
-            <span><?= $this->fetch('title') ?></span>
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+    <div class="uk-grid uk-margin-top uk-margin-bottom uk-hidden-small">
+        <div class="uk-width-2-10 logo">{{ image('img/logo.png',  "alt" : "AGA Tour") }}</div>
+        <div class="uk-width-5-10">...</div>
+        <div class="uk-width-3-10 social">
+            <a target="_blank" href="http://facebook.com/agatourgolf" class="uk-icon-medium uk-icon-facebook"></a>
+            <a target="_blank" href="http://twitter.com/agatour_golf" class="uk-icon-medium uk-icon-twitter"></a>
+            <a target="_blank" href="http://youtube.com/agatour" class="uk-icon-medium uk-icon-youtube"></a>
+            <a target="_blank" href="http://instagram.com/agatour" class="uk-icon-medium uk-icon-instagram"></a>
         </div>
-        <div class="header-help">
-            <span><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></span>
-            <span><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></span>
-        </div>
-    </header>
-    <div id="container">
-
-        <div id="content">
-            <?= $this->Flash->render() ?>
-
-            <div class="row">
+    </div>
+    <?= $this->element('Layout/nav') ?>
+    <div class="page-content uk-margin-top uk-margin-large-bottom">
+        <div class="uk-grid">
+            <div class="uk-width-large-7-10 uk-width-small-1-1">
+                <?= $this->Flash->render() ?>
                 <?= $this->fetch('content') ?>
             </div>
+            <div class="uk-width-3-10 uk-hidden-small">{{ partial("theme/sidebar") }}</div>
         </div>
-        <footer>
-        </footer>
     </div>
+
+    <div class="uk-grid uk-margin-top uk-margin-bottom uk-text-center">
+        <div class="uk-width-1-1 copyright">
+            &copy; 2012-2014 AGA TOUR, Inc | All Rights Reserved.<br>
+            AGA TOUR, Nandos Cup, and the AGA Ranking System are registered trademarks.<br>
+        </div>
+    </div>
+</div>
 </body>
 </html>

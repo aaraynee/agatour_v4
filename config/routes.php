@@ -49,11 +49,18 @@ Router::scope('/', function ($routes) {
      */
     $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
-    $routes->connect('/schedule', ['controller' => 'Tournament', 'action' => 'schedule', 'home']);
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+
+    $routes->connect('/players', ['controller' => 'Player', 'action' => 'all']);
+    $routes->connect('/player/:slug', ['controller' => 'Player', 'action' => 'single'], ['pass' => ['slug']]);
+
+
+    $routes->connect('/schedule', ['controller' => 'Tournament', 'action' => 'schedule']);
+    $routes->connect('/tournament/:slug', ['controller' => 'Tournament', 'action' => 'single'], ['pass' => ['slug']]);
+
 
     /**
      * Connect catchall routes for all controllers.

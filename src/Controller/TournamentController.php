@@ -28,11 +28,24 @@ class TournamentController extends AppController
         $this->loadModel('Tournament');
     }
 
+    public function single($slug) {
+
+        $tournaments = $this->Tournament->find()
+            ->where(['Tournament.slug' => $slug])
+            ->contain(
+                ['Round' =>
+                    ['Player']
+                ]
+            );
+        $tournament = $tournaments->first();
+        $this->set('tournament', $tournament);
+    }
 
     public function schedule()
     {
-        $tournament = TableRegistry::get('Tournament');
+        $tournaments = $this->Tournament->find()
+        ->contain(['Course', 'Round']);
+        $this->set('tournaments', $tournaments);
 
-        $query = $tournament->find();
     }
 }

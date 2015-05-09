@@ -412,7 +412,7 @@ class TemplateTaskTest extends TestCase
 
         $this->Task->expects($this->at(0))->method('createFile')
             ->with(
-                $this->_normalizePath(APP . 'Template/TemplateTaskComments/index.ctp')
+                $this->_normalizePath(APP . 'Template/TemplateTaskComments/all.ctp')
             );
         $result = $this->Task->bake('index', true);
         $this->assertSameAsFile(__FUNCTION__ . '.ctp', $result);
@@ -434,7 +434,7 @@ class TemplateTaskTest extends TestCase
         $this->Task->expects($this->at(0))
             ->method('createFile')
             ->with(
-                $this->_normalizePath(APP . 'Template/TemplateTaskComments/index.ctp'),
+                $this->_normalizePath(APP . 'Template/TemplateTaskComments/all.ctp'),
                 $this->stringContains('$templateTaskComment->article->id')
             );
 
@@ -455,7 +455,7 @@ class TemplateTaskTest extends TestCase
         $this->Task->expects($this->once())
             ->method('createFile')
             ->with(
-                $this->_normalizePath(APP . 'Template/CategoryThreads/index.ctp'),
+                $this->_normalizePath(APP . 'Template/CategoryThreads/all.ctp'),
                 $this->logicalNot($this->stringContains('ParentCategoryThread'))
             );
 
@@ -501,7 +501,7 @@ class TemplateTaskTest extends TestCase
             );
         $this->Task->expects($this->at(2))->method('createFile')
             ->with(
-                $this->_normalizePath(APP . 'Template/TemplateTaskComments/index.ctp'),
+                $this->_normalizePath(APP . 'Template/TemplateTaskComments/all.ctp'),
                 $this->stringContains('TemplateTaskComment')
             );
 
@@ -638,7 +638,7 @@ class TemplateTaskTest extends TestCase
 
         $this->Task->connection = 'test';
         $filename = $this->_normalizePath(
-            APP . 'Plugin/TestTemplate/src/Template/TemplateTaskComments/index.ctp'
+            APP . 'Plugin/TestTemplate/src/Template/TemplateTaskComments/all.ctp'
         );
 
         Plugin::load('TestTemplate', ['path' => APP . 'Plugin/TestTemplate/']);
@@ -671,7 +671,7 @@ class TemplateTaskTest extends TestCase
         $this->Task->expects($this->exactly(4))
             ->method('createFile');
 
-        $templates = ['index.ctp', 'view.ctp', 'add.ctp', 'edit.ctp'];
+        $templates = ['all.ctp', 'view.ctp', 'add.ctp', 'edit.ctp'];
         foreach ($templates as $i => $template) {
             $this->Task->expects($this->at($i))->method('createFile')
                 ->with(
@@ -693,7 +693,7 @@ class TemplateTaskTest extends TestCase
         $this->Task->expects($this->exactly(2))
             ->method('createFile');
 
-        $templates = ['index.ctp', 'add.ctp'];
+        $templates = ['all.ctp', 'add.ctp'];
         foreach ($templates as $i => $template) {
             $this->Task->expects($this->at($i))->method('createFile')
                 ->with(
