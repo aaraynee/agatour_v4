@@ -26,6 +26,7 @@ class PlayerController extends AppController
     public function initialize()
     {
         $this->loadModel('Player');
+        $this->loadModel('Season');
     }
 
     public function single($slug) {
@@ -33,14 +34,33 @@ class PlayerController extends AppController
         $players = $this->Player->find()
             ->contain(
                 ['Round' =>
-                    ['Tournament',
-                    ]]
+                    ['Tournament' =>
+                        ['Course', 'Season'],]]
             )
             ->where(
                 ['Player.slug' => $slug]
             );
+
         $player = $players->first();
+
+
+        $seasons = $this->Season->find()
+            ->order(
+                ['Season.start_date DESC']
+            );
+
+        $seasonsArray = array();
+        foreach($seasons as $season){
+            $seasonsArray[$season->id] = $season->name;
+        }
+        $roundsArray = array();
+        foreach($player->round as $round){
+            $roundsArray[$round->tournament->season->id][$round->id] = date('d-M', strtotime($round->tournament->date)) . ' ' . $round->tournament->name;
+        }
+
         $this->set('player', $player);
+        $this->set('seasons', $seasonsArray);
+        $this->set('rounds', $roundsArray);
     }
 
     public function all()

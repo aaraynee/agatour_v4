@@ -91,7 +91,7 @@ class CourseUpdateShell extends Shell
                 }
             } else {
                 $query = $course->query();
-                $query->insert(['id', 'name', 'slug', 'scorecard', 'address', 'latitude', 'longitude',  'scratch_rating', 'slope_rating'])
+                $query->insert(['id', 'name', 'slug', 'scorecard', 'address', 'latitude', 'longitude',  'scratch_rating', 'slope_rating', 'unit'])
                     ->values($course_details)
                     ->execute();
                 $exist[] = $wp_course->ID;

@@ -16202,3 +16202,394 @@ Stack Trace:
 #10 {main}
 
 
+2015-05-10 20:14:32 Error: [PDOException] SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/CourseUpdateShell.php(96): Cake\Database\Query->execute()
+#4 [internal function]: App\Shell\CourseUpdateShell->main()
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(387): call_user_func_array(Array, Array)
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#10 {main}
+
+
+2015-05-10 20:24:11 Error: [PDOException] SQLSTATE[21S01]: Insert value list does not match column list: 1136 Column count doesn't match value count at row 1
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/CourseUpdateShell.php(96): Cake\Database\Query->execute()
+#4 [internal function]: App\Shell\CourseUpdateShell->main()
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(387): call_user_func_array(Array, Array)
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#10 {main}
+
+
+2015-05-13 04:35:04 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1785' for key 'PRIMARY'
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(66): Cake\Database\Query->execute()
+#4 [internal function]: App\Shell\MigrationShell->season()
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#10 {main}
+
+
+2015-05-13 04:36:01 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2226' for key 'PRIMARY'
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(66): Cake\Database\Query->execute()
+#4 [internal function]: App\Shell\MigrationShell->season()
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#10 {main}
+
+
+2015-05-13 04:40:06 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'start' in 'field list'
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(73): Cake\Database\Query->execute()
+#4 [internal function]: App\Shell\MigrationShell->season()
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#10 {main}
+
+
+2015-05-16 19:46:50 Warning: Warning (2): Invalid argument supplied for foreach() in [/Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 57
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-16 19:46:50 Warning: Warning (2): Invalid argument supplied for foreach() in [/Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 57
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-16 19:46:50 Warning: Warning (2): Invalid argument supplied for foreach() in [/Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 57
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-16 19:49:38 Warning: Warning (2): Invalid argument supplied for foreach() in [/Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 33
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-16 19:49:39 Warning: Warning (2): Invalid argument supplied for foreach() in [/Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 33
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-16 19:49:40 Warning: Warning (2): Invalid argument supplied for foreach() in [/Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 33
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-16 19:49:41 Warning: Warning (2): Invalid argument supplied for foreach() in [/Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 33
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-16 19:49:42 Warning: Warning (2): Invalid argument supplied for foreach() in [/Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 33
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-16 19:58:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause'
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(644): Cake\Database\Query->execute()
+#4 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(595): Cake\ORM\Query->_all()
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(132): Cake\ORM\Query->all()
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(46): Cake\ORM\Query->getIterator()
+#8 [internal function]: App\Shell\MigrationShell->season()
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#10 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#11 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#12 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#13 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#14 {main}
+
+
+2015-05-17 01:52:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'WpPostmeta.wp_post_id' in 'where clause'
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(644): Cake\Database\Query->execute()
+#4 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(595): Cake\ORM\Query->_all()
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Association/ExternalAssociationTrait.php(114): Cake\ORM\Query->all()
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Association/SelectableAssociationTrait.php(56): Cake\ORM\Association\HasMany->_buildResultMap(Object(Cake\ORM\Query), Array)
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/EagerLoader.php(538): Cake\ORM\Association\HasMany->eagerLoader(Array)
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(644): Cake\ORM\EagerLoader->loadExternal(Object(Cake\ORM\Query), Object(Cake\Database\Statement\MysqlStatement))
+#10 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#11 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(595): Cake\ORM\Query->_all()
+#12 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(132): Cake\ORM\Query->all()
+#13 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(49): Cake\ORM\Query->getIterator()
+#14 [internal function]: App\Shell\MigrationShell->season()
+#15 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#16 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#17 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#18 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#19 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#20 {main}
+
+
+2015-05-17 01:53:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'WpPostmeta.wp_post_id' in 'where clause'
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(644): Cake\Database\Query->execute()
+#4 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(595): Cake\ORM\Query->_all()
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Association/ExternalAssociationTrait.php(114): Cake\ORM\Query->all()
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Association/SelectableAssociationTrait.php(56): Cake\ORM\Association\HasMany->_buildResultMap(Object(Cake\ORM\Query), Array)
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/EagerLoader.php(538): Cake\ORM\Association\HasMany->eagerLoader(Array)
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(644): Cake\ORM\EagerLoader->loadExternal(Object(Cake\ORM\Query), Object(Cake\Database\Statement\MysqlStatement))
+#10 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#11 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(595): Cake\ORM\Query->_all()
+#12 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(132): Cake\ORM\Query->all()
+#13 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(49): Cake\ORM\Query->getIterator()
+#14 [internal function]: App\Shell\MigrationShell->season()
+#15 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#16 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#17 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#18 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#19 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#20 {main}
+
+
+2015-05-17 01:55:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'WpPostmeta.wp_post_id' in 'where clause'
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(644): Cake\Database\Query->execute()
+#4 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(595): Cake\ORM\Query->_all()
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Association/ExternalAssociationTrait.php(114): Cake\ORM\Query->all()
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Association/SelectableAssociationTrait.php(56): Cake\ORM\Association\HasMany->_buildResultMap(Object(Cake\ORM\Query), Array)
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/EagerLoader.php(538): Cake\ORM\Association\HasMany->eagerLoader(Array)
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(644): Cake\ORM\EagerLoader->loadExternal(Object(Cake\ORM\Query), Object(Cake\Database\Statement\MysqlStatement))
+#10 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#11 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(595): Cake\ORM\Query->_all()
+#12 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(132): Cake\ORM\Query->all()
+#13 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(49): Cake\ORM\Query->getIterator()
+#14 [internal function]: App\Shell\MigrationShell->season()
+#15 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#16 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#17 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#18 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#19 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#20 {main}
+
+
+2015-05-17 01:55:58 Warning: Warning (2): strpos() expects parameter 1 to be string, array given in [/Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Association.php, line 209]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+strpos - [internal], line ??
+Cake\ORM\Association::__construct() - CORE/src/ORM/Association.php, line 209
+Cake\ORM\Table::hasMany() - CORE/src/ORM/Table.php, line 810
+App\Model\Table\WpPostsTable::initialize() - APP/Model/Table/WpPostsTable.php, line 13
+Cake\ORM\Table::__construct() - CORE/src/ORM/Table.php, line 279
+Cake\ORM\TableRegistry::get() - CORE/src/ORM/TableRegistry.php, line 195
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 27
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-17 01:55:58 Warning: Warning (2): strpos() expects parameter 1 to be string, array given in [/Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Core/functions.php, line 88]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+strpos - [internal], line ??
+pluginSplit - CORE/src/Core/functions.php, line 88
+Cake\ORM\Association::__construct() - CORE/src/ORM/Association.php, line 213
+Cake\ORM\Table::hasMany() - CORE/src/ORM/Table.php, line 810
+App\Model\Table\WpPostsTable::initialize() - APP/Model/Table/WpPostsTable.php, line 13
+Cake\ORM\Table::__construct() - CORE/src/ORM/Table.php, line 279
+Cake\ORM\TableRegistry::get() - CORE/src/ORM/TableRegistry.php, line 195
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 27
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-17 01:55:58 Warning: Warning (2): explode() expects parameter 2 to be string, array given in [/Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Core/functions.php, line 89]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
+explode - [internal], line ??
+pluginSplit - CORE/src/Core/functions.php, line 89
+Cake\ORM\Association::__construct() - CORE/src/ORM/Association.php, line 213
+Cake\ORM\Table::hasMany() - CORE/src/ORM/Table.php, line 810
+App\Model\Table\WpPostsTable::initialize() - APP/Model/Table/WpPostsTable.php, line 13
+Cake\ORM\Table::__construct() - CORE/src/ORM/Table.php, line 279
+Cake\ORM\TableRegistry::get() - CORE/src/ORM/TableRegistry.php, line 195
+App\Shell\MigrationShell::season() - APP/Shell/MigrationShell.php, line 27
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 371
+Cake\Console\ShellDispatcher::_dispatch() - CORE/src/Console/ShellDispatcher.php, line 200
+Cake\Console\ShellDispatcher::dispatch() - CORE/src/Console/ShellDispatcher.php, line 171
+Cake\Console\ShellDispatcher::run() - CORE/src/Console/ShellDispatcher.php, line 122
+[main] - ROOT/bin/cake.php, line 20
+
+
+
+2015-05-17 01:55:59 Error: [InvalidArgumentException] WpPosts is not associated with WpPostmeta
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/EagerLoader.php(232): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\WpPostsTable), 'WpPostmeta', Array, Array)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/EagerLoader.php(337): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\WpPostsTable))
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/EagerLoader.php(316): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\WpPostsTable))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(669): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\WpPostsTable), true)
+#4 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(625): Cake\ORM\Query->_transformQuery()
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(116): Cake\ORM\Query->sql()
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(220): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(272): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(644): Cake\Database\Query->execute()
+#10 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(218): Cake\ORM\Query->_execute()
+#11 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/ORM/Query.php(595): Cake\ORM\Query->_all()
+#12 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php(132): Cake\ORM\Query->all()
+#13 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(49): Cake\ORM\Query->getIterator()
+#14 [internal function]: App\Shell\MigrationShell->season()
+#15 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#16 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#17 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#18 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#19 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#20 {main}
+
+
+2015-05-17 02:50:53 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= NULL WHERE id = NULL' at line 1
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(79): Cake\Database\Query->execute()
+#4 [internal function]: App\Shell\MigrationShell->database('player')
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#10 {main}
+
+
+2015-05-17 03:09:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'adjustment' in 'field list'
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(81): Cake\Database\Query->execute()
+#4 [internal function]: App\Shell\MigrationShell->database('player')
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#10 {main}
+
+
+2015-05-17 03:20:06 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'adjustment' in 'field list'
+Stack Trace:
+#0 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Connection.php(274): Cake\Database\Statement\MysqlStatement->execute()
+#2 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Database/Query.php(174): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 /Users/ahmed/Documents/GitHub/agatour_v4/src/Shell/MigrationShell.php(81): Cake\Database\Query->execute()
+#4 [internal function]: App\Shell\MigrationShell->database('player')
+#5 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/Shell.php(371): call_user_func_array(Array, Array)
+#6 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(200): Cake\Console\Shell->runCommand(Array, true)
+#7 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(171): Cake\Console\ShellDispatcher->_dispatch()
+#8 /Users/ahmed/Documents/GitHub/agatour_v4/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(122): Cake\Console\ShellDispatcher->dispatch()
+#9 /Users/ahmed/Documents/GitHub/agatour_v4/bin/cake.php(20): Cake\Console\ShellDispatcher::run(Array)
+#10 {main}
+
+

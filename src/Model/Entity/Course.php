@@ -25,6 +25,7 @@ class Course extends Entity
         }
         $scorecard_array = explode('|', $full_scorecard);
         $scorecard = array();
+        $byhole = array();
         $i = 1;
         $par = 0;
         $par_front9 = 0;
@@ -37,6 +38,7 @@ class Course extends Entity
             $scorecard['hole'][$i] = $hole_details[1];
             $distance += $hole_details[0];
             $par += $hole_details[1];
+            $byhole[$i] = $hole_details[1];
             if($i == 9){
                 $par_front9 = $par;
             } elseif($i == 18){
@@ -45,8 +47,9 @@ class Course extends Entity
             $i++;
         }
 
-        $scorecard['par_front9'] = $par_front9;
-        $scorecard['par_back9'] = $par_back9;
+        $scorecard['all'] = $byhole;
+        $scorecard['front9'] = $par_front9;
+        $scorecard['back9'] = $par_back9;
         $scorecard['par'] = $par;
 
         return $scorecard[$return];

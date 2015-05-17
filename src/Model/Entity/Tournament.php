@@ -16,27 +16,10 @@ class Tournament extends Entity
         $winner = array();
         foreach($this->_properties['round'] as $round){
             if($round->position == 1){
-                $player = TableRegistry::get('Player')->find()->where(['Player.id' => $round->player_id])->first();
-                $winner[] = $player->name;
+                $winner[] = $round->player->firstname . ' ' . $round->player->lastname;
             }
         }
         return implode(', ', $winner);
-    }
-
-    protected function _getScore() {
-        $score = '';
-        foreach($this->_properties['round'] as $round){
-            if($round->position == 1){
-                $player = TableRegistry::get('Player')->find()->where(['Player.id' => $round->player_id])->first();
-                if(!empty($round->adjusted)) {
-                    $score = $round->adjusted;
-                } else {
-                    $score = $round->total;
-                }
-                break;
-            }
-        }
-        return $score;
     }
 
     protected function _getCompareDate() {

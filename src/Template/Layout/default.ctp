@@ -34,11 +34,21 @@
     <?= $this->element('Layout/nav') ?>
     <div class="page-content uk-margin-top uk-margin-large-bottom">
         <div class="uk-grid">
-            <div class="uk-width-large-7-10 uk-width-small-1-1">
-                <?= $this->Flash->render() ?>
-                <?= $this->fetch('content') ?>
-            </div>
-            <div class="uk-width-3-10 uk-hidden-small">{{ partial("theme/sidebar") }}</div>
+           <?php if(!isset($layout)) :
+            $layout = 'full';
+           endif; ?>
+           <?php if($layout == 'sidebar'): ?>
+                <div class="uk-width-large-7-10 uk-width-small-1-1">
+                    <?= $this->Flash->render() ?>
+                    <?= $this->fetch('content') ?>
+                </div>
+                <div class="uk-width-3-10 uk-hidden-small">{{ partial("theme/sidebar") }}</div>
+            <?php else: ?>
+                <div class="uk-width-large-1-1 uk-width-small-1-1">
+                    <?= $this->Flash->render() ?>
+                    <?= $this->fetch('content') ?>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 

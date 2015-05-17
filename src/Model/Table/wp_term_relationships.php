@@ -3,12 +3,12 @@ namespace App\Model\Table;
 
 use Cake\ORM\Table;
 
-class WpPostsTable extends Table
+class WpTermRelationshipsTable extends Table
 {
 
     public function initialize(array $config)
     {
-        $this->table('wp_posts');
+        $this->table('wp_term_relationships');
     }
 
 }

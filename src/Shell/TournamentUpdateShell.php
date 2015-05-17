@@ -103,6 +103,7 @@ class TournamentUpdateShell extends Shell
         $tournament = TableRegistry::get('Tournament');
         $wp_posts = TableRegistry::get('WpPosts');
         $wp_meta = TableRegistry::get('WpPostmeta');
+        $wp_termrelationships = TableRegistry::get('WpTermRelationships');
 
         $wp_tournaments = $wp_posts
             ->find()
@@ -112,6 +113,9 @@ class TournamentUpdateShell extends Shell
             ->order(['post_date' => 'DESC']);
 
         $wp_metadata = $wp_meta
+            ->find();
+
+        $wp_relationships = $wp_termrelationships
             ->find();
 
         $tournaments = $tournament
@@ -143,13 +147,20 @@ class TournamentUpdateShell extends Shell
                 }
             }
 
+            foreach($wp_relationships as $wp_relationship) {
+                if($wp_relationship->object_id == $wp_tournament->ID){
+                    $type_id = $wp_relationship->term_taxonomy_id;
+                }
+            }
+
 
             $tournament_details = array(
                 'id' => $wp_tournament->ID,
                 'name' => $wp_tournament->post_title,
                 'slug' => $wp_tournament->post_name,
                 'course_id' => $course_id,
-                'type' => $tournament_type,
+                'scoring' => $tournament_type,
+                'type' => $type_id,
                 'points' => $points,
                 'completed' => 0,
                 'date' => $wp_tournament->post_date,
@@ -168,7 +179,7 @@ class TournamentUpdateShell extends Shell
                 }
             } else {
                 $query = $tournament->query();
-                $query->insert(['id', 'name', 'slug', 'course_id', 'type', 'points', 'completed', 'date'])
+                $query->insert(['id', 'name', 'slug', 'course_id', 'scoring', 'type', 'points', 'completed', 'date'])
                     ->values($tournament_details)
                     ->execute();
                 $exist[] = $wp_tournament->ID;

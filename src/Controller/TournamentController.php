@@ -44,7 +44,30 @@ class TournamentController extends AppController
     public function schedule()
     {
         $tournaments = $this->Tournament->find()
-        ->contain(['Course', 'Round']);
+        ->contain(['Course' => [
+            'fields' => [
+                'Course.name'
+            ]
+        ],
+            'Round' => [
+                'Player' => [
+                  'fields' => [
+                      'Player.firstname',
+                      'Player.lastname',
+                  ]
+                ],
+                'conditions' => [
+                    'Round.position' => 1
+                ],
+                'fields' => [
+                    'Round.tournament_id',
+                    'Round.player_id',
+                    'Round.adjusted',
+                    'Round.position',
+                ]
+            ]
+        ])
+            ->order(['Tournament.date DESC']);
         $this->set('tournaments', $tournaments);
 
     }

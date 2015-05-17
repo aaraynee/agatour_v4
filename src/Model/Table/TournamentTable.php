@@ -11,5 +11,6 @@ class TournamentTable extends Table
             'sort' => ['Round.position' => 'ASC']
         ]);
         $this->belongsTo('Course');
+        $this->belongsTo('Season');
     }
 }

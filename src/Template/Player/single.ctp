@@ -126,6 +126,8 @@
 <!-- This is the tabbed navigation containing the toggling elements -->
 <ul class="uk-tab" data-uk-tab="{connect:'#player_tabs'}">
     <li><a href="">Season Summary</a></li>
+    <li><a href="">Scorecards</a></li>
+    <li><a href="">Career</a></li>
     <li><a href="">AGA Cup</a></li>
     <li><a href="">Stats</a></li>
     <li><a href="">Handicap Tracker</a></li>
@@ -135,19 +137,64 @@
 <ul id="player_tabs" class="uk-switcher uk-margin">
     <li>
 
-        <style>
-            <?php for($year = 2013; $year < date('Y');$year++): ?>
-                .tournament<?= $year ?> {
-                    display: none;
+        <script>
+            $(function(){
+                Dashboard.init();
+            });
+
+            var Dashboard = {
+                el: {
+                },
+                init: function(){
+                    var time = new Date();
+                    year = time.getFullYear();
+                    this.el.yearFilter = $('.year');
+                    this.el.seasonFilter = $('.season');
+                    this.el.tournamentFilter = $('.tournament');
+                    this.el.roundFilter = $('.round');
+
+
+                    this.el.yearFilter.find('li a').click(this.switchYear);
+
+                    this.el.seasonFilter.change(this.switchSeason);
+                    var active_season = this.el.seasonFilter.val();
+                    this.el.tournamentFilter.filter('[data-id="'+active_season+'"]').removeClass('uk-hidden');
+
+
+                    this.el.tournamentFilter.change(this.switchTournament);
+                    var active_tournament = this.el.roundFilter.val();
+                    this.el.roundFilter.filter('[data-id="'+active_tournament+'"]').removeClass('uk-hidden');
+
+
+                },
+                switchYear: function(){
+                    year = $(this).data('tab');
+                    $('.uk-table').find('tbody tr').fadeOut().addClass('uk-hidden');
+                    $('.uk-table').find('tbody tr.year'+year).fadeIn().removeClass('uk-hidden');
+                    $('.year').children('li').removeClass('uk-active');
+                    $(this).parents('li').addClass('uk-active');
+                },
+                switchSeason: function(){
+                    var current_season = $(this).val();
+                    $('.tournament').addClass('uk-hidden');
+                    $('.tournament[data-id="'+current_season+'"]').removeClass('uk-hidden');
+                },
+                switchTournament: function(){
+                    console.log("wfwef");
+                    var current_tournament = $(this).val();
+                    $('.round').addClass('uk-hidden');
+                    $('.round[data-id="'+current_tournament+'"]').removeClass('uk-hidden');
                 }
-            <?php endfor; ?>
-
-            .match, .cup {
-                display: none;
             }
-        </style>
+        </script>
 
-        <table>
+        <ul class="uk-subnav uk-subnav-pill year">
+            <li class="uk-active"><a data-tab="2015">2015</a></li>
+            <li><a data-tab="2014">2014</a></li>
+            <li><a data-tab="2013">2013</a></li>
+        </ul>
+
+        <table class="uk-table">
             <thead>
                 <tr>
                     <th></th>
@@ -160,17 +207,96 @@
             </thead>
             <tbody>
                 <?php foreach($player->round as $round): ?>
-                    <tr class="<?= $round->tournament->type ?> tournament<?= date('Y', strtotime($round->tournament->compare_date)) ?>">
+                <tr class="year<?= $round->tournament->season->year ?> <?= (($round->tournament->type == 18 || date('Y', strtotime($round->tournament->date)) != date('Y')) ? 'uk-hidden' : '') ?>">
                         <td><?= $round->tournament->display_date ?></td>
                         <td><?= $round->tournament->name ?></td>
                         <td><?= $round->strokes ?></td>
-                        <td><?= $round->adjusted ?></td>
+                        <td><?= $round->score ?></td>
                         <td><?= $round->position ?></td>
                         <td><?= $round->points ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
+    </li>
+    <li>
+
+        <?= $this->Form->select('season', $seasons, ['class' => 'season']) ?>
+
+        <?php foreach($seasons as $id => $season) : ?>
+            <?= $this->Form->select('tournament', $rounds[$id], ['class' => 'tournament uk-hidden', 'data-id' => $id]) ?>
+        <?php endforeach; ?>
+
+        <?php foreach($player->round as $round): ?>
+
+            <table class="uk-table uk-hidden round" data-id="<?= $round->id ?>">
+                <thead>
+                    <tr>
+                        <th colspan="22"><?= $round->tournament->name ?></th>
+                    </tr>
+                    <tr>
+                        <th>Par</th>
+                        <?php for($hole = 1; $hole <= $round->holes_played; $hole++) :?>
+                            <th><?= $hole ?></th>
+                            <?php if($hole == 9) : ?>
+                                <th>OUT</th>
+                            <?php elseif($hole == 18) : ?>
+                                <th>IN</th>
+                                <th>TOTAL</th>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Par</th>
+                        <?php $scorecard = $round->tournament->course->scorecard('all'); ?>
+                        <?php for($hole = 1; $hole <= $round->holes_played; $hole++) :?>
+                            <td><?= $scorecard[$hole] ?></td>
+                            <?php if($hole == 9) : ?>
+                                <th><?= $round->tournament->course->scorecard('front9') ?></th>
+                            <?php elseif($hole == 18) : ?>
+                                <th><?= $round->tournament->course->scorecard('back9') ?></th>
+                                <th><?= $round->tournament->course->scorecard('par') ?></th>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                    </tr>
+                    <tr>
+                        <th>Score</th>
+                        <?php $scorecard = $round->score('all'); ?>
+                        <?php for($hole = 1; $hole <= $round->holes_played; $hole++) :?>
+                            <td><?= $scorecard[$hole] ?></td>
+                            <?php if($hole == 9) : ?>
+                                <th><?= $round->score('front9') ?></th>
+                            <?php elseif($hole == 18) : ?>
+                                <th><?= $round->score('back9') ?></th>
+                                <th><?= $round->strokes ?></th>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <?php $scorecard = $round->score('status'); ?>
+                        <?php for($hole = 1; $hole <= $round->holes_played; $hole++) :?>
+                            <td><?= $scorecard[$hole] ?></td>
+                            <?php if($hole == 9) : ?>
+                                <th>--</th>
+                            <?php elseif($hole == 18) : ?>
+                                <th>--</th>
+                                <th><?= sprintf('%+d', $round->total) ?></th>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                    </tr>
+                </tbody>
+            </table>
+
+        <?php endforeach; ?>
+
+    </li>
+    <li>
+        Career
+
+
     </li>
     <li></li>
     <li></li>
