@@ -22,7 +22,7 @@ class MigrationShell extends Shell
     public function database($object = NULL) {
 
         if($object) {
-            $objects = array($object);
+            $objects = explode(',', $object);
         } else{
             $objects = ['season', 'tournament', 'course', 'round', 'player'];
         }
@@ -31,10 +31,6 @@ class MigrationShell extends Shell
         $exist = array();
 
         $wp_posts = TableRegistry::get('WpPosts');
-        $wp_meta = TableRegistry::get('WpPostmeta');
-
-        $wp_metadata = $wp_meta
-            ->find();
 
         $wp_objects = $wp_posts
             ->find()
@@ -44,6 +40,8 @@ class MigrationShell extends Shell
             );
 
         foreach($objects as $object) {
+            $this->out(strtoupper($object));
+            $this->out('------------------');
             $table[$object] = TableRegistry::get(ucfirst($object));
             $cake_objects[$object] = $table[$object]
                 ->find()
@@ -56,6 +54,44 @@ class MigrationShell extends Shell
                 if ($wp_object->post_type == $object && $wp_object->post_status == 'publish' || ($object == 'tournament' && $wp_object->post_status == 'future')) {
 
 
+
+                    if($object == 'player') {
+                        $name = explode(' ', $wp_object->post_title);
+                        $details = array(
+                            'id' => $wp_object->ID,
+                            'firstname' => $name[0],
+                            'lastname' => $name[1],
+                            'slug' => $wp_object->post_name,
+                        );
+                        $post_data = array('id', 'firstname', 'lastname', 'slug', 'country', 'dob', 'height', 'weight', 'pob', 'college', 'clubs', 'glove', 'debut');
+                    }elseif($object == 'round') {
+                        $details = array(
+                            'id' => $wp_object->ID,
+                        );
+                        $post_data = array('id', 'player_id', 'tournament_id', 'scorecard');
+                    }elseif($object == 'season') {
+                        $details = array(
+                            'id' => $wp_object->ID,
+                            'name' => $wp_object->post_title,
+                            'slug' => $wp_object->post_name,
+                        );
+                        $post_data = array('id', 'name', 'slug', 'start_date', 'end_date');
+                    }elseif($object == 'tournament') {
+                        $details = array(
+                            'id' => $wp_object->ID,
+                            'name' => $wp_object->post_title,
+                            'slug' => $wp_object->post_name,
+                        );
+                        $post_data = array('id', 'name', 'slug', 'date', 'course_id', 'points');
+                    }elseif($object == 'course') {
+                        $details = array(
+                            'id' => $wp_object->ID,
+                            'name' => $wp_object->post_title,
+                            'slug' => $wp_object->post_name,
+                        );
+                        $post_data = array('id', 'name', 'slug', 'scorecard', 'scratch_rating', 'slope_rating');
+                    }
+
                     foreach($wp_object->wp_postmeta as $post_meta){
                         if(substr($post_meta->meta_key, 0, 1 ) !== '_') {
 
@@ -63,38 +99,35 @@ class MigrationShell extends Shell
                                 $json = explode('"', $post_meta->meta_value);
                                 $post_meta->meta_value = $json[1];
                             }
-                            $details[$post_meta->meta_key] = $post_meta->meta_value;
+
+                            if(in_array($post_meta->meta_key, $post_data)) {
+                                $details[$post_meta->meta_key] = $post_meta->meta_value;
+                            }elseif(in_array($post_meta->meta_key.'_id', $post_data)) {
+                                $details[$post_meta->meta_key.'_id'] = $post_meta->meta_value;
+                            }
                         }
                     }
 
                     if (!in_array($wp_object->ID, $exist[$object])) {
-
-                            $this->out(print_r($details));
+                        $query = $table[$object]->query();
+                        $query->insert($post_data)
+                            ->values($details)
+                            ->execute();
+                        $exist[$object][] = $wp_object->ID;
+                        $status = 'added';
                     }else{
-
-
-
                         $query = $table[$object]->query();
                         $query->update()
                             ->set($details)
                             ->where(['id' => $wp_object->ID])
                             ->execute();
                         $status = 'updated';
-
-                        $this->out($wp_object->post_name . ' ' . $status);
-
-
-                        /*$this->insert($object)
-
-                        $query = $seasonTable->query();
-                        $query->insert(['id', 'name', 'start_date', 'end_date'])
-                            ->values($season_details)
-                            ->execute();
-                        $exist[$object][] = $wp_season->ID;*/
                     }
+                    $this->out($wp_object->post_title . ' ' . $status);
                 }
 
             }
+            $this->out('------------------');
         }
     }
 /*
