@@ -1,7 +1,4 @@
-
 tmp/
 vendor/
 logs/
-*.log
-
-tmp/debug_kit.sqlite
+.idea/
