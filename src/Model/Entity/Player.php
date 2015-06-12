@@ -31,9 +31,7 @@ class Player extends Entity
 
         $rounds_played = 0;
 
-        $rounds = TableRegistry::get('Round')->find()->where(['Round.player_id' => $this->_properties['id']])->contain(['Tournament']);
-
-        foreach ($rounds as $round) {
+        foreach ($this->_properties['round'] as $round) {
             if ($round->holes_played == 18 && $round->tournament->compare_date < $date) {
                 $rounds_played++;
             }
@@ -50,9 +48,7 @@ class Player extends Entity
 
         $handicap_rounds = array();
 
-        $rounds = TableRegistry::get('Round')->find()->where(['Round.player_id' => $this->_properties['id']])->contain(['Tournament']);
-
-        foreach($rounds as $round) {
+        foreach($this->_properties['round'] as $round) {
             if($round->holes_played == 18 && $round->tournament->compare_date < $date)
                 $handicap_rounds[$round->id] = $round->tournament->compare_date;
                 $handicap_scores[$round->id] = $round->handicap;

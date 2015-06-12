@@ -11,6 +11,8 @@ class WpPostsTable extends Table
         $this->table('wp_posts');
         $this->hasMany(
             'WpPostmeta', ['foreignKey' => 'post_id']);
+        $this->hasOne(
+            'WpTermRelationships', ['foreignKey' => 'object_id']);
     }
 
 }

@@ -19,7 +19,7 @@ class MigrationShell extends Shell
 
     }
 
-    public function database($object = NULL) {
+    public function database($object = NULL, $update = FALSE) {
 
         if($object) {
             $objects = explode(',', $object);
@@ -34,7 +34,7 @@ class MigrationShell extends Shell
 
         $wp_objects = $wp_posts
             ->find()
-            ->contain(['WpPostmeta'])
+            ->contain(['WpPostmeta', 'WpTermRelationships'])
             ->where(
                 ['OR' => [['post_status' => 'publish'], ['post_status' => 'future']]]
             );
@@ -52,8 +52,6 @@ class MigrationShell extends Shell
 
             foreach ($wp_objects as $wp_object) {
                 if ($wp_object->post_type == $object && $wp_object->post_status == 'publish' || ($object == 'tournament' && $wp_object->post_status == 'future')) {
-
-
 
                     if($object == 'player') {
                         $name = explode(' ', $wp_object->post_title);
@@ -81,8 +79,9 @@ class MigrationShell extends Shell
                             'id' => $wp_object->ID,
                             'name' => $wp_object->post_title,
                             'slug' => $wp_object->post_name,
+                            'date' => $wp_object->post_date,
                         );
-                        $post_data = array('id', 'name', 'slug', 'date', 'course_id', 'points');
+                        $post_data = array('id', 'name', 'slug', 'date', 'course_id', 'points', 'type');
                     }elseif($object == 'course') {
                         $details = array(
                             'id' => $wp_object->ID,
@@ -107,6 +106,11 @@ class MigrationShell extends Shell
                             }
                         }
                     }
+                    foreach($wp_object->wp_term_relationships as $term){
+                        if($object == 'tournament'){
+                            $details['type'] = $term->term_taxonomy_id;
+                        }
+                    }
 
                     if (!in_array($wp_object->ID, $exist[$object])) {
                         $query = $table[$object]->query();
@@ -115,15 +119,19 @@ class MigrationShell extends Shell
                             ->execute();
                         $exist[$object][] = $wp_object->ID;
                         $status = 'added';
-                    }else{
+                    }elseif($update){
                         $query = $table[$object]->query();
                         $query->update()
                             ->set($details)
                             ->where(['id' => $wp_object->ID])
                             ->execute();
                         $status = 'updated';
+                    }else{
+                        $status = FALSE;
                     }
-                    $this->out($wp_object->post_title . ' ' . $status);
+                    if($status) {
+                        $this->out($wp_object->post_title . ' ' . $status);
+                    }
                 }
 
             }

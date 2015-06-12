@@ -212,16 +212,16 @@ return [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => '127.0.0.1',
+            'host' => 'agatour.us',
             /**
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
             //'port' => 'nonstandard_port_number',
-            'username' => 'root',
-            'password' => 'root',
-            'database' => 'aga',
+            'username' => 'aga_admin',
+            'password' => '788088pC',
+            'database' => 'aga_wordpress',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'cacheMetadata' => true,
